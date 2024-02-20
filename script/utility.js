@@ -9,3 +9,10 @@ function hideElementById(elementId){
     element.classList.add('hidden')
 }
 
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+
+
+}

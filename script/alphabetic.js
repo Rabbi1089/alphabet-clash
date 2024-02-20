@@ -9,6 +9,13 @@
 
 function handleKeyboardKeyUpEvent(event){
     const playerPressed = event.key;
+    //console.log(playerPressed);
+    //Game will over if player pressed escape 
+    if(playerPressed === 'Escape'){
+        gameOver()
+    }
+    
+
     //console.log('tested')
     //----------------------Get the expected to press
 
@@ -134,6 +141,9 @@ function gameOver(){
     hideElementById('playground-section');
     showElementById('final-score')
     const lastScore = getElementValueById('current-score');
-    console.log(lastScore);
-    setElementValueById('game-end-score', lastScore)
+    //console.log(lastScore);
+    setElementValueById('game-end-score', lastScore);
+    const currentAlphabet = getElementTextById('current-alphabet');
+    console.log(currentAlphabet);
+    removeBackgroundColorById(currentAlphabet);
 }
